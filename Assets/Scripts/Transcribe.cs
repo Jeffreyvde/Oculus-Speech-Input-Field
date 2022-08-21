@@ -60,7 +60,7 @@ public class Transcribe : MonoBehaviour
         {
             Debug.LogWarning(arg0 + s);
             Deactivate();
-            OnFullTranscript(partialTranscribe);
+            OnFullTranscript(string.Empty);
         }));
         voice.VoiceEvents.OnPartialTranscription.AddListener(OnPartialTranscript);
 
@@ -150,7 +150,7 @@ public class Transcribe : MonoBehaviour
         if (Active && !focus)
         {
             Deactivate();
-            OnFullTranscript(partialTranscribe);
+            OnFullTranscript(string.Empty);
         }
     }
 
